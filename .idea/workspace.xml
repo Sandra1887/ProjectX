@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1fdd1c7-ab49-43e8-aad4-9ca34e6f430e" name="Changes" comment="DbHandler create(), read(), update() tests working">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Application.java" afterDir="false" />
+    <list default="true" id="c1fdd1c7-ab49-43e8-aad4-9ca34e6f430e" name="Changes" comment="DbHandler create(), read(), update(), delete(), Helpertests()">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ToDoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/UserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DbHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DbHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DbHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DbHandlerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -103,13 +101,20 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1687515796954</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="DbHandler create(), read(), update(), delete(), Helpertests()">
+      <created>1687519769422</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1687519769422</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="DbHandlerTest connection working" />
     <MESSAGE value="DbHandler create() and read() tests working" />
     <MESSAGE value="DbHandler create(), read(), update() tests working" />
-    <option name="LAST_COMMIT_MESSAGE" value="DbHandler create(), read(), update() tests working" />
+    <MESSAGE value="DbHandler create(), read(), update(), delete(), Helpertests()" />
+    <option name="LAST_COMMIT_MESSAGE" value="DbHandler create(), read(), update(), delete(), Helpertests()" />
   </component>
 </project>
