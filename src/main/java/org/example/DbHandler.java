@@ -92,6 +92,7 @@ public class DbHandler implements iCrud {
                 return true;
             }
         }
+
         if(asOrDo.equalsIgnoreCase("done")) {
             String sql = "UPDATE " + tableName + " SET done = ? WHERE todo_id = ?";
             String done = helper.askForDone();
@@ -104,20 +105,22 @@ public class DbHandler implements iCrud {
                 System.out.println("Error updating table: " + e.getMessage());
                 return true;
             }
-        } else System.out.println("Wrong input!");
+        }
         return false;
     }
 
     @Override
     public boolean delete() {
         String tableName = helper.askForTableName();
-        String sql = "DROP TABLE " + tableName;
-        try {
-            Statement stmt = connection.createStatement();
-            stmt.execute(sql);
+        int id = helper.askForId();
+        String sql = "DELETE FROM " + tableName + " WHERE todo_id = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            pstmt.setInt(1, id);
+            pstmt.executeUpdate();
+            System.out.println("Table deleted successfully");
             return true;
         } catch (SQLException e) {
-            System.out.println("Error dropping table: " + e.getMessage());
+            System.out.println("Error deleting todo: " + e.getMessage());
             return false;
         }
     }

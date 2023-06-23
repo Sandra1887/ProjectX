@@ -75,4 +75,34 @@ class DbHandlerTest {
 
         assertFalse(result);
     }
+    @Test
+    public void testUpdate() throws SQLException {
+        when(helperMock.askForTableName()).thenReturn("tableMock");
+        when(helperMock.askForId()).thenReturn(1);
+        when(helperMock.askForUpdate()).thenReturn("assignment");
+        when(helperMock.askForOnlyAssignment()).thenReturn("assignmentMock");
+        when(helperMock.askForDone()).thenReturn("mockDone");
+
+        when(connectionMock.prepareStatement(Mockito.anyString())).thenReturn(pstmtMock);
+        doNothing().when(pstmtMock).setString(Mockito.anyInt(), Mockito.anyString());
+        doNothing().when(pstmtMock).setInt(Mockito.anyInt(), Mockito.anyInt());
+        when(pstmtMock.executeUpdate()).thenReturn(1);
+
+        boolean result = dbHandlerMock.update();
+
+        assertFalse(result);
+    }
+    @Test
+    public void testDelete() throws SQLException {
+        when(helperMock.askForTableName()).thenReturn("tableMock");
+        when(helperMock.askForId()).thenReturn(1);
+
+        when(connectionMock.prepareStatement(Mockito.anyString())).thenReturn(pstmtMock);
+        doNothing().when(pstmtMock).setInt(Mockito.anyInt(), Mockito.anyInt());
+        when(pstmtMock.executeUpdate()).thenReturn(1);
+
+        boolean result = dbHandlerMock.delete();
+
+        assertFalse(result);
+    }
 }

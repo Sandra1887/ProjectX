@@ -9,9 +9,22 @@ public class Helper {
     public Helper() {
         sc = new Scanner(System.in);
     }
+
     public String askForDbName() {
-        System.out.println("Enter dbName and press enter");
+        System.out.println("Welcome to the ToDo-Application! Enter dbName and press enter");
         return sc.nextLine();
+    }
+
+    public int mainMenu() {
+        System.out.println("""
+                What would you like to do?
+                1. Create Todo
+                2. Read Todo
+                3. Update Todo
+                4. Delete Todo
+                5. Exit""");
+
+        return sc.nextInt();
     }
     public String askForTableName() {
         System.out.println("Enter table name and press enter");
@@ -28,6 +41,10 @@ public class Helper {
     }
     public String askForDone() {
         System.out.println("Enter done (yes or no) and press enter");
+        return sc.nextLine();
+    }
+    public String askForUpdate() {
+        System.out.println("Update assignment or done? Enter your choice and press enter");
         return sc.nextLine();
     }
 
