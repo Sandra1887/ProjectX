@@ -47,13 +47,13 @@ class HelperTest {
         assertEquals("mockAssignee", result.getAssignee());
         assertEquals("mockDone", result.getDone());
     }
-    /*@Test
+    @Test
     public void testAskForOnlyAssignment() {
         when(mockScanner.nextLine()).thenReturn("mockedAssignment");
         String assignment = mockHelper.askForOnlyAssignment();
         Mockito.verify(mockScanner).nextLine();
         assertEquals("mockedAssignment", assignment);
-    }*/
+    }
     @Test
     public void testAskForAssignee() {
         when(mockScanner.nextLine()).thenReturn("mockedAssignee");
@@ -67,5 +67,13 @@ class HelperTest {
         String done = mockHelper.askForDone();
         Mockito.verify(mockScanner).nextLine();
         assertEquals("mockedDone", done);
+    }
+
+    @Test
+    public void testAskForId() {
+        when(mockScanner.nextInt()).thenReturn(1);
+        int id = mockHelper.askForId();
+        Mockito.verify(mockScanner).nextInt();
+        assertEquals(1, id);
     }
 }

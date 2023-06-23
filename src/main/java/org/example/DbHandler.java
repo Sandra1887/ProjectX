@@ -75,7 +75,23 @@ public class DbHandler implements iCrud {
 
     @Override
     public boolean update() {
-        return false;
+        String tableName = helper.askForTableName();
+        String sql = "UPDATE " + tableName + " SET todo = ?, done = ?, assignedTo = ? WHERE todo_id = ?";
+        int todoId = helper.askForId();
+        String assignment = helper.askForOnlyAssignment();
+        String assignee = helper.askForAssignee();
+        String done = helper.askForDone();
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            pstmt.setString(1, assignment);
+            pstmt.setString(3, assignee);
+            pstmt.setString(2, done);
+            pstmt.setInt(4, todoId);
+            pstmt.executeUpdate();
+            return false;
+        } catch (SQLException e) {
+            System.out.println("Error updating table: " + e.getMessage());
+            return true;
+        }
     }
 
     @Override

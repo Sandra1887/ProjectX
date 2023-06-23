@@ -18,10 +18,10 @@ public class Helper {
         return sc.nextLine();
     }
 
-   /* public String askForAssignment() {
+   public String askForOnlyAssignment() {
         System.out.println("Enter assignment and press enter");
         return sc.nextLine();
-    }*/
+    }
     public String askForAssignee() {
         System.out.println("Enter assignee and press enter");
         return sc.nextLine();
@@ -39,5 +39,9 @@ public class Helper {
         System.out.println("Enter done (yes or no) and press enter");
         String done = sc.nextLine();
         return new ToDo(assignment, assignee, done);
+    }
+    public int askForId() {
+        System.out.println("Enter id and press enter");
+        return sc.nextInt();
     }
 }
