@@ -2,7 +2,7 @@ package org.example;
 
 import java.sql.*;
 
-public class DbHandler implements iCrud {
+public class DbHandler extends DbSuper implements iCrud, iTable {
     private Connection connection;
     private Statement stmt;
     private ResultSet rs;
@@ -14,7 +14,7 @@ public class DbHandler implements iCrud {
         helper = new Helper();
     }
     
-    public Connection getConnection(String dbName) throws SQLException {
+    /*public Connection getConnection(String dbName) throws SQLException {
         if (connection == null || connection.isClosed()) {
             try {
                 connection = DriverManager.getConnection("jdbc:sqlite:" + dbName + ".db");
@@ -26,7 +26,7 @@ public class DbHandler implements iCrud {
     }
     public void setConnection(Connection connection) {
         this.connection = connection;
-    }
+    }*/
 
     @Override
     public boolean create() {

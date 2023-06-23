@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1fdd1c7-ab49-43e8-aad4-9ca34e6f430e" name="Changes" comment="DbHandler create(), read(), update(), delete(), Helpertests()">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ToDoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/UserTest.java" afterDir="false" />
+    <list default="true" id="c1fdd1c7-ab49-43e8-aad4-9ca34e6f430e" name="Changes" comment="User, testUser classes working">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DbSuper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/UserHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/iDb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/iTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DbHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DbHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -107,7 +109,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1687519769422</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="User, testUser classes working">
+      <created>1687522398213</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1687522398213</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -115,6 +123,7 @@
     <MESSAGE value="DbHandler create() and read() tests working" />
     <MESSAGE value="DbHandler create(), read(), update() tests working" />
     <MESSAGE value="DbHandler create(), read(), update(), delete(), Helpertests()" />
-    <option name="LAST_COMMIT_MESSAGE" value="DbHandler create(), read(), update(), delete(), Helpertests()" />
+    <MESSAGE value="User, testUser classes working" />
+    <option name="LAST_COMMIT_MESSAGE" value="User, testUser classes working" />
   </component>
 </project>
